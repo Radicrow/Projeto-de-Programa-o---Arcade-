@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 
+
+
 void delay(int segundos)
 {
     int milli_seconds = 1000 * segundos;
@@ -13,6 +15,11 @@ void delay(int segundos)
     }
 
 void menu();
+
+void intro(){
+	
+	menu();
+}
 
 void game_1(){
 	system("cls");
@@ -150,10 +157,19 @@ void game_2(){
 
 void game_3(){
 	int escolha = 0;
+	int sn;
 	do{
 	system("cls || clear");
 	printf("Gousmas War\n");
-	
+	printf("Nas distantes terras de Liima, eh comum as pessoas capturarem Gousmas para lutar. \nUse seu intelecto para derrotar seu oponente em um combate!\n\n");
+	printf("REGRAS:\nDurante a luta, cada participante comeca com duas Gousmas em campo e com o nivel de furia igual a 1.\nAo escolher uma Gousma para atacar, todo o nivel de furia do atacante e transferido para a Gousma atacada.\nQuando a Gousma atacada alcança um nivel de furia maior que 5, ela eh desintegrada.\n");
+	printf("\nComo a Gousma eh feita de um liquido viscoso isso permite que durante a luta uma Gousma pode se dividir em duas,\ntransferindo uma quantidade selecionada de furia para a outra Gousma. Por exemplo, se uma unica Gousma em campo tem 4\nde furia, pode ser dividida em outra Gousma passando 1 de furia, assim,teremos uma Gousma com 3 de furia e outra\ncom 1 de furia. \n\nO limite maximo de Gousmas em campo e de dois para cada treinador.\nSe um jogador tem todas as Gousmas derrotadas, ele perde o jogo.\n");
+	printf("\nVoce gostaria de comecar?\n\n1 - Sim   2 - Nao\n\nInsira o valor da sua escolha: ");
+	scanf("%d", &sn);
+	if(sn == 1){
+		system("cls||clear");
+		//insira o codigo do jogo aqui
+}
 	printf("Deseja jogar novamente? (1: Sim/2:Nao): ");
 	scanf("%i", &escolha);
 	if (escolha == 1){
@@ -167,7 +183,7 @@ void game_3(){
 		menu();
 	}
 	else{
-		printf("Por favor escolha um valor v?lido");
+		printf("Por favor escolha um valor valido");
 		escolha = 0;
 	}
 }
