@@ -18,7 +18,7 @@ void game_1(){
 	system("cls");
 	int escolha, sn, sn2, q1, q2, q3, q4, q5;
 	printf("\nPERGUNTA E RESPOSTA\n\nSerao feitas 5 perguntas com 4 alternativas cada.\nSua pontuacao sera exibida no final\n\n"); 
-		printf("Voce gostaria de comecar?\n\n1 - Sim   2 - Nao\n\nInsira o numero da sua escolha: ");
+		printf("Voce gostaria de comecar?\n\n1 - Sim   2 - Nao\n\nInsira o valor da sua escolha: ");
 		scanf("%d", &sn);
 		if(sn == 1)
 		{
@@ -27,7 +27,7 @@ void game_1(){
 		printf("\n\nQual eh a capital do Brasil?\n\n1 - Sao Paulo   2 - Brasilia   3 - Rio de Janeiro   4 - Rio Grande do Sul\n\nInsira o numero da resposta certa: ");
 	        scanf("%d", &q1);
 	    if(q1 == 2){
-	    	printf("PARABENS!!! voce acertou :)");
+	    	printf("PARABENS!!! Voce acertou :)");
 	    	score++;
 		}
 		else
@@ -42,12 +42,12 @@ void game_1(){
 		
 		if(q2 == 1)
 		{
-			printf("PARABENS!!! voce acertou :)");
+			printf("PARABENS!!! Voce acertou :)");
 			score++;
 		}
 		else
 		{
-			printf("Que pena, voce errou. A resposta certa era: China ");	
+			printf("Que pena, oce errou. A resposta certa era: China ");	
 		}
 		
 		delay(2);
@@ -55,9 +55,9 @@ void game_1(){
 		printf("\n\nQual das estruturas abaixo nao faz parte das sete maravilhas do mundo?\n\n1 - Cristo Redentor   2 - Muralha da China   3 - Mangueirao   4 - Coliseu\n\nInsira o numero da resposta certa: ");
 		scanf("%d", &q3);
 		
-		if(q2 == 3)
+		if(q3 == 3)
 		{
-			printf("PARABENS!!! voce acertou :)");
+			printf("PARABENS!!! Voce acertou :)");
 			score++;
 		}
 		else
@@ -72,7 +72,7 @@ void game_1(){
 		
 		if(q4 == 2)
 		{
-			printf("PARABENS!!! voce acertou :)");
+			printf("PARABENS!!! Voce acertou :)");
 			score++;
 		}
 		else
@@ -82,17 +82,17 @@ void game_1(){
 		
 		delay(2);
 		system("cls || clear");
-		printf("\n\nQuantos titulos mundiais o Palmeiras tem?\n\n1 - Dois   2 - Quatro   3 - Um   4 - Zero\n\nInsira o numero da resposta certa: ");
+		printf("\n\nComo se chama o medo de flores?\n\n1 - Plantaephobia   2 - Flosphobia   3 - Floraphobia   4 - Antophobia\n\nInsira o numero da resposta certa: ");
 		scanf("%d", &q5);
 		
 		if(q5 == 4)
 		{
-			printf("PARABENS!!! voce acertou :)");
+			printf("PARABENS!!! Voce acertou :)");
 			score++;
 		}
 		else
 		{
-			printf("Que pena, voce errou. A resposta certa era: Zero ");	
+			printf("Que pena, voce errou. A resposta certa era: Antophobia ");	
 		}
 		delay(2);
 		system("cls || clear");
@@ -123,9 +123,10 @@ void game_1(){
 		menu();
 	}
 	else{
-		printf("Por favor escolha um valor válido\n");
+		printf("Por favor escolha um valor valido\n");
 	}
 }
+
 void game_2(){
 	system("cls || clear");
 	int escolha;
@@ -134,16 +135,16 @@ void game_2(){
 	printf("Deseja jogar novamente? (1: Sim/2:Nao): ");
 	scanf("%i", &escolha);
 	if (escolha == 1){
-		game_1();
+		game_2();
 	}	
 	else if (escolha == 2){
-		printf("Retornando ao menu");
+		printf("Retornando ao menu...");
 		delay(2);
 		system("cls || clear");
 		menu();
 	}
 	else{
-		printf("Por favor escolha um valor válido");
+		printf("Por favor escolha um valor valido");
 	}
 }
 
@@ -156,18 +157,17 @@ void game_3(){
 	printf("Deseja jogar novamente? (1: Sim/2:Nao): ");
 	scanf("%i", &escolha);
 	if (escolha == 1){
-		system("cls");
-		system("clear");
-		game_1();
+		system("cls||Clear");
+		game_3();
 	}	
 	else if (escolha == 2){
-		printf("Retornando ao menu");
+		printf("Retornando ao menu...");
 		delay(2);
 		system("cls || clear");
 		menu();
 	}
 	else{
-		printf("Por favor escolha um valor válido");
+		printf("Por favor escolha um valor v?lido");
 		escolha = 0;
 	}
 }
