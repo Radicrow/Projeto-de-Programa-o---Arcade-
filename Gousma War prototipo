@@ -12,13 +12,15 @@ int main() {
     turno = rand() % 2 + 1;
 
     printf("Bem vindo ao Gousma Wars!\n");
-    printf("Treinador 1 (Gousma 1: %d, Gousma 2: %d)\n", p1_left, p1_right);
-    printf("Treinador 2 (Gousma 1: %d, Gousma 2: %d)\n", p2_left, p2_right);
+    printf("Treinador 1 ((1)Gousma 1: %d, (2)Gousma 2: %d)\n", p1_left, p1_right);
+    printf("Treinador 2 ((3)Gousma 1: %d, (4)Gousma 2: %d)\n", p2_left, p2_right);
 
     do {
         printf("\nTurno do treinador %d. \n", turno);
-        printf("Enter move: ");
-        scanf("%d %d", &atacante, &alvo);
+        printf("Insira o atacante: ");
+        scanf("%i", &atacante);
+        printf("Insira o alvo: ");
+        scanf("%i", &alvo);
 
 
         if (atacante == 1) {
@@ -73,9 +75,9 @@ int main() {
     
         turno = turno == 1 ? 2 : 1;
 
-    
-        printf("Treinador 1 (Gousma 1: %d, Gousma 2: %d)\n", p1_left, p1_right);
-        printf("Treinador 2 (Gousma 1: %d, Gousma 2: %d)\n", p2_left, p2_right);
+    	system("cls||clear");
+        printf("Treinador 1 ((1)Gousma 1: %d, (2)Gousma 2: %d)\n", p1_left, p1_right);
+        printf("Treinador 2 ((3)Gousma 1: %d, (4)Gousma 2: %d)\n", p2_left, p2_right);
     } while (1);
 
     return 0;
