@@ -21,9 +21,11 @@ void intro(){
 	menu();
 }
 
-void game_1(){
+int game_1(void){
 	system("cls");
-	int escolha, sn, sn2, q1, q2, q3, q4, q5;
+	int choice_1 = 0;
+	do{
+	int sn, sn2, q1, q2, q3, q4, q5;
 	printf("\nPERGUNTA E RESPOSTA\n\nSerao feitas 5 perguntas com 4 alternativas cada.\nSua pontuacao sera exibida no final\n\n"); 
 		printf("Voce gostaria de comecar?\n\n1 - Sim   2 - Nao\n\nInsira o valor da sua escolha: ");
 		scanf("%d", &sn);
@@ -31,7 +33,7 @@ void game_1(){
 		{
 		int score = 0;
 		system("cls || clear");
-		printf("\n\nQual tipo sanguineo eh considerado doador universal?\n\n1 - O Positivo   2 - O Negativo   3 - B Negativo   4 - AB Positivo\n\nInsira o o valor equivalente a resposta correta: ");
+		printf("\n\nQual tipo sanguineo eh considerado doador universal?\n\n1 - O Positivo   2 - O Negativo   3 - B Negativo   4 - AB Positivo\n\nInsira o valor equivalente a resposta correta: ");
 	        scanf("%d", &q1);
 	    if(q1 == 2){
 	    	printf("PARABENS!!! Voce acertou :)");
@@ -44,7 +46,7 @@ void game_1(){
 		
 		delay(2);
 		system("cls || clear");
-		printf("\n\nQual eh o pais mais populoso do mundo?\n\n1 - China   2 - Venezuela   3 - India   4 - Estados Unidos\n\nInsira o o valor equivalente a resposta correta: ");
+		printf("\n\nQual eh o pais mais populoso do mundo?\n\n1 - China   2 - Venezuela   3 - India   4 - Estados Unidos\n\nInsira o valor equivalente a resposta correta: ");
 		scanf("%d", &q2);
 		
 		if(q2 == 1)
@@ -59,7 +61,7 @@ void game_1(){
 		
 		delay(2);
 		system("cls || clear");
-		printf("\n\nQuantos satelites naturais conhecidos o planeta Netuno possui?\n\n1 - 18   2 - 9   3 - 14   4 - 23\n\nInsira o o valor equivalente a resposta correta: ");
+		printf("\n\nQuantos satelites naturais conhecidos o planeta Netuno possui?\n\n1 - 18   2 - 9   3 - 14   4 - 23\n\nInsira o valor equivalente a resposta correta: ");
 		scanf("%d", &q3);
 		
 		if(q3 == 3)
@@ -74,7 +76,7 @@ void game_1(){
 		
 		delay(2);
 		system("cls || clear");
-		printf("\n\nQual dos paises abaixo nao fala portugues?\n\n1 - Angola   2 - Mexico   3 - Brasil   4 - Portugal\n\nInsira o o valor equivalente a resposta correta: ");
+		printf("\n\nQual dos paises abaixo nao fala portugues?\n\n1 - Angola   2 - Mexico   3 - Brasil   4 - Portugal\n\nInsira o valor equivalente a resposta correta: ");
 		scanf("%d", &q4);
 		
 		if(q4 == 2)
@@ -89,7 +91,7 @@ void game_1(){
 		
 		delay(2);
 		system("cls || clear");
-		printf("\n\nComo se chama o medo de flores?\n\n1 - Plantaephobia   2 - Flosphobia   3 - Floraphobia   4 - Antophobia\n\nInsira o o valor equivalente a resposta correta: ");
+		printf("\n\nComo se chama o medo de flores?\n\n1 - Plantaephobia   2 - Flosphobia   3 - Floraphobia   4 - Antophobia\n\nInsira o valor equivalente a resposta correta: ");
 		scanf("%d", &q5);
 		
 		if(q5 == 4)
@@ -105,46 +107,61 @@ void game_1(){
 		system("cls || clear");
 		
 		printf("Voce acertou %i/5 questoes\n", score);
-		
-		}
-		else{
+	printf("Deseja jogar novamente? (1: Sim/2:Nao): ");
+	scanf("%i", &choice_1);
+	if (choice_1 == 1){
+		game_1();
+		return 0;
+	}	
+	else if (choice_1 == 2){
+		printf("Retornando ao menu");
+		delay(2);
+		system("cls || clear");
+		break;
+		menu();
+		return 0;
+	}
+	else{
+		printf("Por favor escolha um valor valido\n");
+		delay(2);
+		game_1();
+		return 0;
+	}
+}
+else if (sn == 2){
 			system("cls || clear");
 			printf("Deseja retornar ao menu?(1:Sim   2: Nao)");
 			int mn;
 			scanf("%i", &mn);
 			if (mn == 1){
+				printf("Retornando ao menu...");
+				delay(2);
+				break;
 				menu();
 			}
 			else{ game_1();
 			}
 		}
-	printf("Deseja jogar novamente? (1: Sim/2:Nao): ");
-	scanf("%i", &escolha);
-	if (escolha == 1){
-		game_1();
-	}	
-	else if (escolha == 2){
-		printf("Retornando ao menu");
-		delay(2);
-		system("cls || clear");
-		menu();
-	}
-	else{
-		printf("Por favor escolha um valor valido\n");
-	}
+		else{
+			printf("Por favor insira um valor valido");
+			delay(2);
+			system("cls||clear");
+			game_1();
+		}
+	} while (choice_1 !=0);
 }
 
 void game_2(){
 	system("cls || clear");
-	int escolha;
+	int choice_2;
 	printf("Cobra na caixa!\n");
 	
 	printf("Deseja jogar novamente? (1: Sim/2:Nao): ");
-	scanf("%i", &escolha);
-	if (escolha == 1){
+	scanf("%i", &choice_2);
+	if (choice_2 == 1){
 		game_2();
 	}	
-	else if (escolha == 2){
+	else if (choice_2 == 2){
 		printf("Retornando ao menu...");
 		delay(2);
 		system("cls || clear");
@@ -156,13 +173,13 @@ void game_2(){
 }
 
 void game_3(){
-	int escolha = 0;
+	int choice_3 = 0;
 	int sn;
 	do{
 	system("cls || clear");
 	printf("Gousmas War\n");
 	printf("Nas distantes terras de Liima, eh comum as pessoas capturarem Gousmas para lutar. \nUse seu intelecto para derrotar seu oponente em um combate!\n\n");
-	printf("REGRAS:\nDurante a luta, cada participante comeca com duas Gousmas em campo e com o nivel de furia igual a 1.\nAo escolher uma Gousma para atacar, todo o nivel de furia do atacante e transferido para a Gousma atacada.\nQuando a Gousma atacada alcança um nivel de furia maior que 5, ela eh desintegrada.\n");
+	printf("REGRAS:\nDurante a luta, cada participante comeca com duas Gousmas em campo e com o nivel de furia igual a 1.\nAo escolher uma Gousma para atacar, todo o nivel de furia do atacante e transferido para a Gousma atacada.\nQuando a Gousma atacada alcan?a um nivel de furia maior que 5, ela eh desintegrada.\n");
 	printf("\nComo a Gousma eh feita de um liquido viscoso isso permite que durante a luta uma Gousma pode se dividir em duas,\ntransferindo uma quantidade selecionada de furia para a outra Gousma. Por exemplo, se uma unica Gousma em campo tem 4\nde furia, pode ser dividida em outra Gousma passando 1 de furia, assim,teremos uma Gousma com 3 de furia e outra\ncom 1 de furia. \n\nO limite maximo de Gousmas em campo e de dois para cada treinador.\nSe um jogador tem todas as Gousmas derrotadas, ele perde o jogo.\n");
 	printf("\nVoce gostaria de comecar?\n\n1 - Sim   2 - Nao\n\nInsira o valor da sua escolha: ");
 	scanf("%d", &sn);
@@ -340,25 +357,39 @@ if (turno == 2){
         printf("Treinador 1 ((1)Gousma 1: %d, (2)Gousma 2: %d)\n", p1_left, p1_right);
         printf("Treinador 2 ((3)Gousma 1: %d, (4)Gousma 2: %d)\n", p2_left, p2_right);
     } while (1);
-}
+	
 	printf("Deseja jogar novamente? (1: Sim/2:Nao): ");
-	scanf("%i", &escolha);
-	if (escolha == 1){
+	scanf("%i", &choice_3);
+	if (choice_3 == 1){
 		system("cls||Clear");
 		game_3();
 	}	
-	else if (escolha == 2){
+	else if (choice_3 == 2){
 		printf("Retornando ao menu...");
 		delay(2);
 		system("cls || clear");
+		break;
 		menu();
 	}
 	else{
 		printf("Por favor escolha um valor valido");
-		escolha = 0;
+		choice_3 = 0;
 	}
 }
-	while (escolha !=0);
+else if (sn == 2){
+		system("cls||clear");
+		int mn;
+		printf("Voce deseja retornar ao menu? (1:Sim, 2:Nao)");
+		scanf("%i", &mn);
+		if (mn == 1){
+			printf("Retornando ao menu...");
+			delay(2);
+			break;
+			menu();
+		}
+	}
+}
+	while (choice_3 !=0);
 }
 
 void menu(){
@@ -378,7 +409,7 @@ void menu(){
 	if (escolha == 3){
 		game_3();
 	}
-	if (escolha ==4){
+	if (escolha == 4){
 		printf("Saindo do aplicativo...");
 		break;
 	}
@@ -388,4 +419,5 @@ void menu(){
 
 int main(void){
 	menu();
+
 }
