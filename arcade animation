@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <conio.h>
+#include <windows.h>
+
+int main() {
+    int frame = 0;
+    int x = 0;
+
+    while (frame < 600) { 
+        system("cls"); 
+
+         printf("          AAAAAAAA        RRRRRRRRRRRRRRRRR         CCCCCCCCCCC            AAAAAAAA        DDDDDDDDDDDDDDD       EEEEEEEEEEEEEEEEE\n");
+         printf("          AAAAAAAA        RRRRRRRRRRRRRRRRRR       CCCCCCCCCCCCC           AAAAAAAA        DDDDDDDDDDDDDDDDD     EEEEEEEEEEEEEEEEE\n");
+         printf("         AAAAAAAAA        RRRRRRRRRRRRRRRRRR      CCCCCCCCCCCCCCCC        AAAAAAAAA        DDDDDDDDDDDDDDDDDD    EEEEEEEEEEEEEEEEE\n");
+         printf("         AAAAAAAAAA       RRRRRRRRRRRRRRRRRRR    CCCCCCCCCCCCCCCCC        AAAAAAAAAA       DDDDDDDDDDDDDDDDDD    EEEEEEEEEEEEEEEEE\n");
+         printf("         AAAAAAAAAA       RRRRRR      RRRRRRR   CCCCCCCCC CCCCCCCCC       AAAAAAAAAA       DDDDDD   DDDDDDDDDD   EEEEE            \n");
+         printf("        AAAAAAAAAAA       RRRRRR       RRRRRR   CCCCCCC     CCCCCCC      AAAAAAAAAAA       DDDDDD      DDDDDDD   EEEEE            \n");
+         printf("        AAAAAAAAAAAA      RRRRRR       RRRRRR  CCCCCCC       CCCCCC      AAAAAAAAAAAA      DDDDDD       DDDDDD   EEEEE            \n");
+         printf("       AAAAAA AAAAAA      RRRRRR       RRRRRR  CCCCCC                   AAAAAA AAAAAA      DDDDDD       DDDDDDD  EEEEE            \n");
+         printf("       AAAAAA AAAAAA      RRRRRR      RRRRRRR  CCCCCC                   AAAAAA AAAAAAA     DDDDDD        DDDDDD  EEEEE            \n");
+         printf("       AAAAAA  AAAAAA     RRRRRRRRRRRRRRRRRRR  CCCCCC                   AAAAAA  AAAAAA     DDDDDD        DDDDDD  EEEEEEEEEEEEEEEE \n");
+         printf("      AAAAAA   AAAAAA     RRRRRRRRRRRRRRRRRR   CCCCCC                  AAAAAAA  AAAAAA     DDDDDD        DDDDDD  EEEEEEEEEEEEEEEE \n");
+         printf("      AAAAAA   AAAAAAA    RRRRRRRRRRRRRRRRR    CCCCCC                  AAAAAA   AAAAAAA    DDDDDD        DDDDDD  EEEEEEEEEEEEEEEE \n");
+         printf("      AAAAAA    AAAAAA    RRRRRRRRRRRRRRR      CCCCCC                  AAAAAA    AAAAAA    DDDDDD        DDDDDD  EEEEEEEEEEEEEEEE \n");
+         printf("     AAAAAAAAAAAAAAAAA    RRRRRR.RRRRRRRRR     CCCCCC        CCCCCC   AAAAAAAAAAAAAAAAA    DDDDDD        DDDDDD  EEEEE            \n");
+         printf("     AAAAAAAAAAAAAAAAAA   RRRRRR   RRRRRRR     CCCCCCC       CCCCCC   AAAAAAAAAAAAAAAAAA   DDDDDD       DDDDDDD  EEEEE            \n");
+         printf("     AAAAAAAAAAAAAAAAAA   RRRRRR    RRRRRRR    CCCCCCC      CCCCCCC   AAAAAAAAAAAAAAAAAA   DDDDDD       DDDDDDD  EEEEE            \n");
+         printf("    AAAAAAAAAAAAAAAAAAA   RRRRRR    RRRRRRRR    CCCCCCC     CCCCCCC  AAAAAAAAAAAAAAAAAAA   DDDDDD      DDDDDDD   EEEEE            \n");
+         printf("    AAAAAA       AAAAAAA  RRRRRR     RRRRRRR    CCCCCCCCC CCCCCCCC   AAAAA       AAAAAAAA  DDDDDD    DDDDDDDDD   EEEEE            \n");
+         printf("   AAAAAA         AAAAAA  RRRRRR      RRRRRRR    CCCCCCCCCCCCCCCCC  AAAAAA         AAAAAA  DDDDDDDDDDDDDDDDDD    EEEEEEEEEEEEEEEEE\n");
+         printf("   AAAAAA         AAAAAA  RRRRRR      RRRRRRRR    CCCCCCCCCCCCCCC   AAAAAA         AAAAAA  DDDDDDDDDDDDDDDDDD    EEEEEEEEEEEEEEEEE\n");
+         printf("   AAAAAA         AAAAAAA RRRRRR       RRRRRRR     CCCCCCCCCCCCC    AAAAAA         AAAAAAA DDDDDDDDDDDDDDDDD     EEEEEEEEEEEEEEEEE\n");
+         printf("   AAAAA           AAAAAA RRRRRR        RRRRRRR     CCCCCCCCCC     AAAAAA           AAAAAA DDDDDDDDDDDDDDD       EEEEEEEEEEEEEEEEE\n");
+
+        x++;
+
+        if (x > 10) {
+            x = 0;
+        }
+
+        Sleep(50);
+
+        frame++;
+    }
+
+    return 0;
+}
