@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    srand(time(NULL));
+    
+    int caixa_com_botao = rand() % 5 + 1;
+    int caixa_com_cobra = rand() % 5 + 1;
+    while (caixa_com_cobra == caixa_com_botao) {
+        caixa_com_cobra = rand() % 5 + 1;
+    }
+    
+    char nome_jogador1[20], nome_jogador2[20];
+    printf("Bem-vindos ao jogo Cobra Na Caixa!\n");
+    printf("Jogador 1, coloque seu nome: ");
+    scanf("%s", nome_jogador1);
+    printf("Jogador 2, coloque seu nome: ");
+    scanf("%s", nome_jogador2);
+    
+    int caixa_jogador1, caixa_jogador2;
+    do {
+        printf("%s, Abra uma caixa: ", nome_jogador1);
+        scanf("%d", &caixa_jogador1);
+
+        printf("%s, Abra uma caixa!: ", nome_jogador2);
+        scanf("%d", &caixa_jogador2);
+
+        if (caixa_jogador1 == caixa_com_botao) {
+            printf("%s achou o botao e ganhou o jogo!\n", nome_jogador1);
+            break;
+        } else if (caixa_jogador1 == caixa_com_cobra) {
+            printf("%s perdeu! Havia uma cobra na caixa %d.\n", nome_jogador1, caixa_com_cobra);
+            break;
+        } else if (caixa_jogador2 == caixa_com_botao) {
+            printf("%s achou o botao e ganhou o jogo!\n", nome_jogador2);
+            break;
+        } else if (caixa_jogador2 == caixa_com_cobra) {
+            printf("%s perdeu! Havia uma cobra na caixa %d.\n", nome_jogador2, caixa_com_cobra);
+            break;
+        } else {
+            printf("Nao ha nada nas caixas %d e %d, ambos jogadores tentem novamente.\n", caixa_jogador1, caixa_jogador2);
+        }
+    } while (1);
+    
+    return 0;
+}
